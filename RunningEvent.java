@@ -12,7 +12,16 @@ public class RunningEvent{
         this.eventname = n;
         this.hurdles = h;
         this.runnerName = name;
-        this.time=time;
+
+        int temp = (int)(Math.random()*2)+1;
+        int doubletemp = 0;
+        if (temp == 1){
+           doubletemp+=(int)(Math.random()*4);
+        }
+        else if (temp == 2){
+            doubletemp-=(int)(Math.random()*4);
+        }
+        this.time=time+doubletemp;
     }
 
     public String toString(){
